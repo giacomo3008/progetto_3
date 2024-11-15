@@ -329,7 +329,13 @@ function howManyDays(date){
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
 console.log("---ESERCIZIO 10---");
+const myBirth = new Date("2002-08-30");
+console.log(isTodayMyBirthday(myBirth));
 
+function isTodayMyBirthday(birth){
+  const now = new Date();
+  return now.getDay() === birth.getDay() && now.getMonth() === birth.getMonth();
+}
 
 
 // Arrays & Oggetti
